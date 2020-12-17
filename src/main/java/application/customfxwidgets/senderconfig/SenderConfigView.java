@@ -22,7 +22,7 @@ import application.utils.ValidationStatus;
 import application.utils.Validations;
 import application.utils.ValidatorUtils;
 import application.utils.kafka.KafkaPartitionUtils;
-import com.sun.javafx.scene.control.skin.TextFieldSkin;
+import javafx.scene.control.skin.TextFieldSkin;
 import javafx.beans.binding.StringExpression;
 import javafx.beans.property.ReadOnlyStringWrapper;
 import javafx.beans.property.StringProperty;

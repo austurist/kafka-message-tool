@@ -1,7 +1,7 @@
 package application.utils;
 
 import application.logging.Logger;
-import com.sun.javafx.scene.control.skin.TableViewSkin;
+import javafx.scene.control.skin.TableViewSkin;
 import javafx.collections.ObservableList;
 import javafx.event.EventHandler;
 import javafx.scene.control.SelectionMode;
