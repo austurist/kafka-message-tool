@@ -131,9 +131,9 @@ public class TopicConfigView extends AnchorPane implements Displayable {
 
     private void addAdditionalEntryToConfigNameContextMenu() {
         TextFieldSkin customContextSkin = new TextFieldSkin(topicConfigNameField) {
-            @Override
+            //@Override
             public void populateContextMenu(ContextMenu contextMenu) {
-                super.populateContextMenu(contextMenu);
+                //super.populateContextMenu(contextMenu);
                 contextMenu.getItems().add(0, new SeparatorMenuItem());
                 contextMenu.getItems().add(0, generateNameMenuItem);
             }
