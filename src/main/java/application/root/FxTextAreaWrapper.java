@@ -41,9 +41,9 @@ public class FxTextAreaWrapper implements TextAreaWrapper {
         saveToFilePopupMenuItem.setOnAction(event -> saveContentToFile.execute());
 
         TextAreaSkin customContextSkin = new TextAreaSkin(fxTextArea) {
-            @Override
+            //@Override
             public void populateContextMenu(ContextMenu contextMenu) {
-                super.populateContextMenu(contextMenu);
+                //super.populateContextMenu(contextMenu);
                 contextMenu.getItems().add(0, new SeparatorMenuItem());
                 contextMenu.getItems().add(0, saveToFilePopupMenuItem);
             }
