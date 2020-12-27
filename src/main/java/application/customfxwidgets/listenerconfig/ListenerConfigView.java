@@ -18,7 +18,7 @@ import application.utils.ConfigNameGenerator;
 import application.utils.GuiUtils;
 import application.utils.ValidatorUtils;
 import application.utils.gui.FXNodeBlinker;
-import com.sun.javafx.scene.control.skin.TextFieldSkin;
+import javafx.scene.control.skin.TextFieldSkin;
 import javafx.application.Platform;
 import javafx.beans.binding.BooleanBinding;
 import javafx.beans.binding.StringExpression;

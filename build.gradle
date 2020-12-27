@@ -9,7 +9,7 @@ buildscript {
         classpath 'org.ajoberstar:grgit:1.7.2'
         classpath "org.jfrog.buildinfo:build-info-extractor-gradle:4.5.0"
         classpath 'net.ltgt.gradle:gradle-apt-plugin:0.8'
-        classpath 'com.github.jengelman.gradle.plugins:shadow:2.0.1'
+        classpath 'com.github.jengelman.gradle.plugins:shadow:4.0.3'
     }
 }
 
@@ -17,6 +17,7 @@ plugins {
     id 'java'
     id 'org.ajoberstar.grgit' version '1.7.2'
     id 'com.github.ben-manes.versions' version '0.15.0'
+    id 'org.openjfx.javafxplugin' version '0.0.9'
 }
 
 repositories {
@@ -38,6 +39,10 @@ apply plugin: 'maven-publish'
 apply plugin: "jacoco"
 apply plugin: 'com.github.johnrengelman.shadow'
 
+javafx {
+    version = "11"
+    modules = [ 'javafx.controls', 'javafx.graphics', 'javafx.fxml', 'javafx.swing' ]
+}
 
 static String getShortenedTimestamp() {
     new Date().format("MMdd-HHmmss", TimeZone.default)
@@ -50,8 +55,8 @@ version = "1.0.4.0"
 
 println "Gradle project dir: ${projectDir}"
 
-sourceCompatibility = 1.8
-targetCompatibility = 1.8
+sourceCompatibility = 11
+targetCompatibility = 11
 ext.timestamp = Instant.now().toString()
 
 distTar.enabled = false
@@ -90,11 +95,8 @@ dependencies {
     compile group: 'org.codehaus.groovy', name: 'groovy-all', version: '2.4.13'
     compile group: 'org.fxmisc.richtext', name: 'richtextfx', version: '0.8.1'
     compile group: 'org.controlsfx', name: 'controlsfx', version: '8.40.14'
-}
-
-task wrapper(type: Wrapper) {
-    group = rootProject.name
-    gradleVersion = '3.4.1'
+    compile group: 'jakarta.xml.bind', name: 'jakarta.xml.bind-api', version: '2.3.3'
+    runtime group: 'com.sun.xml.bind', name: 'jaxb-impl', version: '2.3.3'
 }
 
 checkstyle {

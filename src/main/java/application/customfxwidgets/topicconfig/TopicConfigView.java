@@ -19,7 +19,7 @@ import application.utils.ConfigNameGenerator;
 import application.utils.TooltipCreator;
 import application.utils.ValidatorUtils;
 import application.utils.kafka.KafkaBrokerHostInfo;
-import com.sun.javafx.scene.control.skin.TextFieldSkin;
+import javafx.scene.control.skin.TextFieldSkin;
 import impl.org.controlsfx.autocompletion.SuggestionProvider;
 import javafx.beans.binding.Bindings;
 import javafx.beans.binding.StringExpression;
